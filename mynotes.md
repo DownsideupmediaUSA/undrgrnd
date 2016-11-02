@@ -49,7 +49,7 @@ requirements:
    2.song - b/t artist, b/t genre
    3.genre - b/t song, h/m artists through songs
    4.song/genre - (join) b/t song, b/t genre
-  (?)* USER CAN ONLY DL after COMMENTING.
+(?) * USER CAN ONLY DL after COMMENTING.
   * User can create and edit comments ONLY    
    5.user(listener) - h/m comments
    6.comments - b/t listener, b/t song-genre

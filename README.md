@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to Undrgrnd Promo Distribution
 
-Things you may want to cover:
+This ruby on rails music player application which allows
+registered users to listen to, comment on and download pre released works from ABC label. This application will feature the following:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-include a has_many, a belongs_to, and a has_many :through relationship
+-join model stores an additional user submittable attribute
+-contains active record scope methods
+-includes nested forms
+-will allow user to login via Facebook
+-forms will display various messages upon form completion
