@@ -41,7 +41,7 @@ requirements:
    2.song - title, star rating, timestamps
    3.genre - name, timestamps
    4.song/genre - (join) song_id, genre_id
-   5.listener - name, timestamps
+   5.user - name, timestamps
    6.comments - content, artist_id, song_id
 
    models/relationships:
