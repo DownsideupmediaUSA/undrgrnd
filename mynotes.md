@@ -29,13 +29,14 @@ requirements:
 
 
  -promo player
-   -label/listener authentication (signup/signin)
-     -listeners(public)- can listen to and comment on(and in turn can download) all songs.  
+   -user authentication (signup/signin)
+     -listeners(public)- can listen to and comment on(and in turn can download) all songs.
+     -artists - can be searched by name, song, genre
      -songs - can be searched by title, artist, genre
      -genres - can be searched by song, & artist?
 
 
-  tables:
+   tables:
    1.artist - name, timestamps
    2.song - title, star rating, timestamps
    3.genre - name, timestamps
@@ -47,6 +48,23 @@ requirements:
    1.artist - h/m-songs, h/m -genres
    2.song - b/t artist, b/t genre
    3.genre - b/t song, h/m artists through songs
-   4.song/genre - (join) b/t song, b/t genre  
+   4.song/genre - (join) b/t song, b/t genre
+  (?)* USER CAN ONLY DL after COMMENTING.
+  * User can create and edit comments ONLY    
    5.user(listener) - h/m comments
    6.comments - b/t listener, b/t song-genre
+
+   controllers/views
+   1.users
+     -show
+   2.songs
+     -show, index, new, create (private- post params)
+   3.genres
+     -show
+   4.comments
+     -create, (private- comment params)
+   5.artists
+     -show
+   6.sessions
+     -destroy, new, create
+   7.static (?)
