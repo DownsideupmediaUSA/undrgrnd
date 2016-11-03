@@ -37,16 +37,16 @@ requirements:
 
 
    tables:
-   1.artist - name, timestamps
-   2.song - title, star rating, timestamps
-   3.genre - name, timestamps
-   4.song/genre - (join) song_id, genre_id
-   5.user - name, timestamps
-   6.comments - content, artist_id, song_id
+   <!-- 1.artist - name, timestamps                                          -->
+   2.song - title, artist id, star rating, timestamps                  -x
+   3.genre - name, artist id, song id, timestamps                      -x
+   4.song/genre - (join) song_id, genre_id                             -x
+   5.user - username, password_digest,  timestamps                     -x
+   6.comments - content, artist_id, song_id                            -x
 
    models/relationships:
    1.artist - h/m-songs, h/m -genres
-   2.song - b/t artist, b/t genre
+   2.song - b/t artist, b/t genre                                      -x
    3.genre - b/t song, h/m artists through songs
    4.song/genre - (join) b/t song, b/t genre
 (?) * USER CAN ONLY DL after COMMENTING.
