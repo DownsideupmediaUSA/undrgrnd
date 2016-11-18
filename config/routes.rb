@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users do
-  get '/users/sign_out' => 'devise/sessions#destroy'
+  devise_for :users, :skip => [:sessions] do
+  get '/auth/facebook' => 'sessions#create'
+  end
+  devise_scope :user do
+  delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
   resources :dashboard
   resources :songs
@@ -8,6 +11,7 @@ Rails.application.routes.draw do
   resources :comments
   resources :genres
   root to: "static_pages#home"
+
 
 
   # resources :genres

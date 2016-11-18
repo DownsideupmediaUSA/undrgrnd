@@ -2,11 +2,9 @@ class DashboardController < ApplicationController
   def index
   end
 
-
-
-  # def new
-  #   @user = User.new
-  # end
+  def new
+    @user = User.new
+  end
 
   # def sign_out
   # session[:user_id].destroy
